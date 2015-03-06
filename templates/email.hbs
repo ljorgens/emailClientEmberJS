@@ -1,5 +1,16 @@
-<h1>{{senderName}}</h1>
-<h2>{{senderSubject}}</h2>
-<p>{{senderBody}}</p>
 
-<button type="submit" class="btn btn-warning">Edit Your Friends Email!</button>
+	Sender:<h1>{{model.senderName}}</h1>
+	{{#if isEditing}}
+	<form>
+		{{input value=model.senderName id="model.senderName" class='form-contorl' placeholder="New Sender name"}}
+		{{input value=model.senderSubject id="model.senderSubject" class='form-control' placeholder="New Subject"}}
+		{{textarea value=model.body id="model.body" class="form-control" placeholder="New message"}}
+		<button type="submit" class="btn btn-warning" {{action 'save'}}>Done Editing</button>
+	</form>
+		{{else}}
+		Subject:<h2>{{model.senderSubject}}</h2>
+		<p>{{model.senderBody}}</p>
+<button type="submit" class="btn btn-warning" {{action 'edit'}}>Edit Your Friends Email!</button>
+	{{/if}}
+	
+	{{outlet}}
