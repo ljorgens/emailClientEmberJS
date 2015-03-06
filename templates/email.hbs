@@ -4,7 +4,7 @@
 	<form>
 		{{input value=model.senderName id="model.senderName" class='form-contorl' placeholder="New Sender name"}}
 		{{input value=model.senderSubject id="model.senderSubject" class='form-control' placeholder="New Subject"}}
-		{{textarea value=model.body id="model.body" class="form-control" placeholder="New message"}}
+		{{textarea value=model.senderBody id="model.senderBody" class="form-control" placeholder="New message"}}
 		<button type="submit" class="btn btn-warning" {{action 'save'}}>Done Editing</button>
 	</form>
 		{{else}}

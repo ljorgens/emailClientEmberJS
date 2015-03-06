@@ -7,6 +7,9 @@ EmailClient.NewEmailController = Ember.Controller.extend({
 				senderBody: this.get('senderBody'),
 			});
 		NewEmail.save();
+		this.set('senderName', null),
+		this.set('senderSubject', null),
+		this.set('senderBody', null),
 		this.transitionToRoute('emails');
 		}
 	}
