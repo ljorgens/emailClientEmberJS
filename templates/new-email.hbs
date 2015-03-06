@@ -1,0 +1,7 @@
+<h1>Make a New Email for yourself</h1>
+<form>
+	{{input value=senderName id="senderName" class="form-control" placeholder="Pretend Friends Name"}}
+	{{input value=senderSubject id="senderSubject" class="form-control" placeholder="What your Pretend Friend wants to talk about"}}
+	{{textarea value=senderBody id="senderBody" class="form-control" placeholder="Where your friend would write a message... if you had any" rows="15"}}
+	<button type="submit" class="btn btn-danger" {{action 'save'}}>Send an Email to Yourself</button>
+</form>

@@ -1,6 +1,8 @@
 <h1>Recieved Emails</h1>
 <ul>
-{{#each}}
-	<li>{{name}}{{subject}}</li>
+{{#each email in model}}
+	<a href="#/email"><li>Sender: <strong>{{email.senderName}}</strong>
+			Subject: <strong>{{email.senderSubject}}</strong>
+	</li></a>
 {{/each}}
 </ul>
